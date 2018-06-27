@@ -17,7 +17,7 @@ So i build up this package.
 	- redis
 	- supervisord (invokes daemons)
 
-notice: mysql has no password
+notice: mysql has no password;  in /etc/mysql/my.cnf, skip-grant-tables is written to skip database password authentication.
 
 
 - Clone
@@ -43,8 +43,12 @@ notice: work/root directory will contain the databases;
 	- vi /var/www/html/wordpress/wp-config.php
 	
                  - databasename -> wordpress
+		 define('DB_NAME', 'wordpress')
                  - user -> root
+		 define('DB_USER', 'root')
                  - password -> empty string
+		 define('DB_PASSWORD', '')
+		 
 
 - Access to the installed wordpress
 	http://localhost:8888/wordpress/
