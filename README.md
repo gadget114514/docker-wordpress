@@ -25,7 +25,7 @@ notice: mysql has no password;  in /etc/mysql/my.cnf, skip-grant-tables is writt
 	- cd work
         - cloning here 
 
-notice: work/root directory will contain the databases;
+notice: work/root directory will contain the databases persistent data;
 
 - Download wordpress.zip and put to this directory as wordpress.zip.
   
