@@ -41,9 +41,9 @@ notice: work/root directory will contain the databases;
 - Rewrite wp-config.php
         - docker exec -it [id] /bin/bash
 	- vi /var/www/html/wordpress/wp-config.php
-             - databasename -> wordpress
-             - user -> root
-             - password -> empty string
+                 - databasename -> wordpress
+                 - user -> root
+                 - password -> empty string
 
 - Access to the installed wordpress
 	http://localhost:8888/wordpress/
