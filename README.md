@@ -51,5 +51,7 @@ notice: work/root directory will contain the databases;
 		   define('DB_PASSWORD', '')
 ```		 
 
+- Check php working
+	- http://localhost:8888/info.php
 - Access to the installed wordpress
-	http://localhost:8888/wordpress/
+	- http://localhost:8888/wordpress/
