@@ -34,6 +34,7 @@ notice: work/root directory will contain the databases persistent data;
 - Make
 	- make build (to build image) 
 	- make run (to run)
+	- make initdb (to setup (once))
 	- make init (to setup (once))
 
         make init setup databases;
@@ -55,3 +56,20 @@ notice: work/root directory will contain the databases persistent data;
 	- http://localhost:8888/info.php
 - Access to the installed wordpress
 	- http://localhost:8888/wordpress/
+
+
+- Error in executing mysqld
+
+If you have errors running mysqld in privileged container like this "/usr/sbin/mysqld: error while loading shared libraries: libaio.so.1: cannot open shared object file: Permission denied" , then do the following steps:
+
+
+Search and remove all mysql installation from host machine. You can search mysql packages as 
+
+```
+ sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
+ sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
+ sudo /etc/init.d/apparmor restart
+ sudo aa-status #Should not have mysql here
+```
+
+After the above steps, try to re-start mysql-server in docker container

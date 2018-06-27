@@ -42,6 +42,8 @@ RUN useradd -u 1100 -G www-data -m -s /bin/bash wp
 ADD node-setup.sh /home/wp/node-setup.sh
 RUN bash /home/wp/node-setup.sh
 RUN apt-get install -y nodejs 
+
+RUN npm install npm@latest -g
 RUN npm install -g forever
 
 RUN apt-get install -y telnet vim
@@ -51,7 +53,9 @@ RUN chmod +x /usr/local/bin/wp
 
 COPY wordpress.zip  /home/wp/wordpress.zip
 COPY wordpress-setup.sh /home/wp/wordpress-setup.sh
+COPY db-setup.sh /home/wp/db-setup.sh
 RUN chmod a+x /home/wp/wordpress-setup.sh
+RUN chmod a+x /home/wp/db-setup.sh
 COPY wordpress-createdb.sql /home/wp/wordpress-createdb.sql
 
 # FASTCGI configuration files

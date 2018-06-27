@@ -1,6 +1,5 @@
 #!/bin/bash
 
-mysqld --initialize --user=mysql ; exit 0
 
 SITENAME=wordpress
 TITLE=docker-wordpress
