@@ -10,3 +10,9 @@ single docker
 - supervisord (invokes daemons)
 
 notice: mysql has no password
+
+
+- Make
+   - make build (to build image) 
+   - make run (to run)
+   - make init (to setup (once))
