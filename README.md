@@ -43,11 +43,11 @@ notice: work/root directory will contain the databases;
 	- vi /var/www/html/wordpress/wp-config.php
 	
                  - databasename -> wordpress
-		 define('DB_NAME', 'wordpress')
+		 - define('DB_NAME', 'wordpress')
                  - user -> root
-		 define('DB_USER', 'root')
+		 - define('DB_USER', 'root')
                  - password -> empty string
-		 define('DB_PASSWORD', '')
+		 - define('DB_PASSWORD', '')
 		 
 
 - Access to the installed wordpress
