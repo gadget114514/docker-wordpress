@@ -39,7 +39,7 @@ notice: work/root directory will contain the databases;
         make init setup databases;
 
 - Rewrite wp-config.php
-        - docker exec -it [id] /bin/bash
+	- docker exec -it [id] /bin/bash
 	- vi /var/www/html/wordpress/wp-config.php
 
 ```
