@@ -42,11 +42,11 @@ notice: work/root directory will contain the databases;
         - docker exec -it [id] /bin/bash
 	- vi /var/www/html/wordpress/wp-config.php
 	
-                 - databasename -> wordpress
+                 - databasename : wordpress
 		 - define('DB_NAME', 'wordpress')
-                 - user -> root
+                 - user : root
 		 - define('DB_USER', 'root')
-                 - password -> empty string
+                 - password : empty string
 		 - define('DB_PASSWORD', '')
 		 
 
