@@ -3,7 +3,7 @@
 This is docker-wordpress not using docker-compose;
 
 There are a lot of docker-wordpress solution using docker-compose.
-But i want to use single docker image containing necessory components over all.
+But i want to use single docker image containing necessory components overall.
 So i build up this package.
 
 - Using compontents
